@@ -3,7 +3,7 @@
     ViewBag.Title = "Random";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@{ 
+@{
     var className = Model.Customers.Count > 0 ? "popular" : null;
 }
 
@@ -20,12 +20,16 @@
 }
 else
 {
-    <ul>
+<table class="table">
         @foreach (var customer in Model.Customers)
         {
-            <li>@customer.Name</li>
+            <tr>
+                <td>
+                    @customer.Name
+                </td>
+            </tr>
         }
-    </ul>
+</table>
 }
 
 
